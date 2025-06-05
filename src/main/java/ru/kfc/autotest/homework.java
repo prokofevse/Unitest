@@ -10,7 +10,7 @@ public class homework {
 
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(50); // Заполнение массива случайными числами от 0 до 50
+            array[i] = random.nextInt(51); // Заполнение массива случайными числами от 0 до 51
         }
 
         System.out.println();
