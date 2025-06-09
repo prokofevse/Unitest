@@ -1,17 +1,20 @@
 package ru.kfc.autotest;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Person p1 = new Person();
+        Person p2 = new Person("Иванов Иван", 25);
+        Person p3 = new Person("Петров Петр", 30);
+        Person p4 = new Person();
+        Person p5 = new Person("Петров Петр", 30);
 
-        for (int i = 4; i <= 6; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        p1.talk(); // пустой
+        p2.talk(); // обычный Иванов
+        p3.talk(); // избранный Петров
+        p4.talk(); // еще один пустой
+        p5.talk(); // обычный Петров
+
+        Person.count();
     }
 }
