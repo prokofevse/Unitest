@@ -8,8 +8,6 @@ public class Person {
 
 
     public Person() {
-        this.fullName = null;
-        this.age = 0;
         this.id = counter++;
         // конструктор без параметров
     }
