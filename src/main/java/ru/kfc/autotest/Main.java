@@ -1,20 +1,26 @@
 package ru.kfc.autotest;
 
-
 public class Main {
     public static void main(String[] args) {
-        Person p1 = new Person();
-        Person p2 = new Person("Иванов Иван", 25);
-        Person p3 = new Person("Петров Петр", 30);
-        Person p4 = new Person();
-        Person p5 = new Person("Петров Петр", 30);
+        BonusCard bonusCard = new BonusCard("СберБонус");
+        SavingsCard savingsCard = new SavingsCard("АльфаКопим");
 
-        p1.talk(); // пустой
-        p2.talk(); // обычный Иванов
-        p3.talk(); // избранный Петров
-        p4.talk(); // еще один пустой
-        p5.talk(); // обычный Петров
+        bonusCard.getBalance();
+        savingsCard.getBalance();
+        // Изначальный баланс карт
 
-        Person.count();
+        bonusCard.deposit(10000);
+        savingsCard.deposit(20000);
+        // Пополнение баланса карт
+
+
+        bonusCard.purchase(10000);
+        savingsCard.purchase(15000);
+        // Совершение покупок
+
+
+        bonusCard.showInfo();
+        savingsCard.showInfo();
+        // Инфа по картам после совершения операций по ним
     }
 }
